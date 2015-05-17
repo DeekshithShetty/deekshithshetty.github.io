@@ -19,6 +19,53 @@ jQuery(document).ready(function($) {
 
     });
     
+    $.getJSON("https://api.github.com/users/DeekshithShetty/repos", function(result){
+        $.each(result, function(i, field){
+            if(result[i].description !== ""){
+                var $divMain = $("<div>",{ class : "item row"});
+
+                var $aImg = $("<a>",{ class : "col-md-4 col-sm-4 col-xs-12" , target : "_blank" });
+                    //var a = result[i].contents_url;
+                    //$divMain.append(a.toSting());
+                    var imagePath = "https://raw.githubusercontent.com/" + result[i].full_name + "/master/project.png";
+                    var $img  = $("<img>",{ class : "img-responsive project-image" });
+                    $img.attr("src",imagePath);
+                $aImg.append($img);
+
+                var $divIn = $("<div>",{ class : "desc col-md-8 col-sm-8 col-xs-12" });
+
+                    var $h3 = $("<h3>",{ class : "title" });
+                        var $aH3 = $("<a>",{ target : "_blank" });
+                        $aH3.append(result[i].name);
+                    $h3.append($aH3);
+
+                    var $p = $("<p>");
+                    $p.append(result[i].description)
+
+                    var $pGit = $("<p>");
+                        var $aGit = $("<a>",{ class : "more-link" ,target : "_blank" });
+                        $aGit.attr("href",result[i].html_url);
+                        var $i = $("<i>",{ class : "fa fa-external-link" });
+                        //$aGit.append(<i class="">);
+                        $aGit.append($i);
+                        $aGit.append("View on Github")
+                    $pGit.append($aGit);
+
+                $divIn.append($h3); 
+                $divIn.append($p);
+                $divIn.append($pGit);
+
+            $divMain.append($aImg); 
+            $divMain.append($divIn);
+
+            $("#projectContainer").append($divMain);
+            }           
+        });
+    });
+
+
+    
+
     /* Bootstrap Tooltip for Skillset */
     $('.level-label').tooltip();
     
