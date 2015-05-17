@@ -29,16 +29,19 @@ jQuery(document).ready(function($) {
 
                     var imagePath = "./assets/images/image_not_available.png";
                     var contentUrl = result[i].contents_url;
+                    var pName = result[i].name;
                     contentUrl = contentUrl.split("{");
                     $.getJSON(contentUrl[0], function(result){
                         $.each(result, function(i, field){
                             if(result[i].name == "project.png"){
                                 imagePath = result[i].download_url;
                                 $img.attr("src",imagePath);
+                                $img.attr("alt",pName);
                             }
                         });
                     });       
                     $img.attr("src",imagePath);
+                $aImg.attr("href",result[i].html_url);    
                 $aImg.append($img);
 
                 var $divIn = $("<div>",{ class : "desc col-md-8 col-sm-8 col-xs-12" });
@@ -53,6 +56,7 @@ jQuery(document).ready(function($) {
                             ret = string.join(" ");
 
                             while(ret === undefined){}
+                            $aH3.attr("href",result[i].html_url);    
                             $aH3.append(ret.toString());
                         }
                         splitProjectName();
