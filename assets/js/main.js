@@ -21,14 +21,23 @@ jQuery(document).ready(function($) {
     
     $.getJSON("https://api.github.com/users/DeekshithShetty/repos", function(result){
         $.each(result, function(i, field){
-            if(result[i].description !== ""){
+            //if(result[i].description !== ""){
                 var $divMain = $("<div>",{ class : "item row"});
 
                 var $aImg = $("<a>",{ class : "col-md-4 col-sm-4 col-xs-12" , target : "_blank" });
-                    //var a = result[i].contents_url;
-                    //$divMain.append(a.toSting());
-                    var imagePath = "https://raw.githubusercontent.com/" + result[i].full_name + "/master/project.png";
                     var $img  = $("<img>",{ class : "img-responsive project-image" });
+
+                    var imagePath = "./assets/images/image_not_available.png";
+                    var contentUrl = result[i].contents_url;
+                    contentUrl = contentUrl.split("{");
+                    $.getJSON(contentUrl[0], function(result){
+                        $.each(result, function(i, field){
+                            if(result[i].name == "project.png"){
+                                imagePath = result[i].download_url;
+                                $img.attr("src",imagePath);
+                            }
+                        });
+                    });       
                     $img.attr("src",imagePath);
                 $aImg.append($img);
 
@@ -36,7 +45,18 @@ jQuery(document).ready(function($) {
 
                     var $h3 = $("<h3>",{ class : "title" });
                         var $aH3 = $("<a>",{ target : "_blank" });
-                        $aH3.append(result[i].name);
+
+                        var projectName = result[i].name;
+                        function splitProjectName(){
+                            var ret; 
+                            var string = projectName.split("-");
+                            ret = string.join(" ");
+
+                            while(ret === undefined){}
+                            $aH3.append(ret.toString());
+                        }
+                        splitProjectName();
+          
                     $h3.append($aH3);
 
                     var $p = $("<p>");
@@ -59,7 +79,7 @@ jQuery(document).ready(function($) {
             $divMain.append($divIn);
 
             $("#projectContainer").append($divMain);
-            }           
+           // }           
         });
     });
 
