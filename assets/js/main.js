@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
     
     $.getJSON("https://api.github.com/users/DeekshithShetty/repos", function(result){
         $.each(result, function(i, field){
-            //if(result[i].description !== ""){
+            if(result[i].fork == false){
                 var $divMain = $("<div>",{ class : "item row"});
 
                 var $aImg = $("<a>",{ class : "col-md-4 col-sm-4 col-xs-12" , target : "_blank" });
@@ -79,11 +79,11 @@ jQuery(document).ready(function($) {
                 $divIn.append($p);
                 $divIn.append($pGit);
 
-            $divMain.append($aImg); 
-            $divMain.append($divIn);
+            	$divMain.append($aImg); 
+            	$divMain.append($divIn);
 
-            $("#projectContainer").append($divMain);
-           // }           
+            	$("#projectContainer").append($divMain);
+            }           
         });
     });
 
