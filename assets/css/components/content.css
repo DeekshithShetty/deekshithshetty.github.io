@@ -1,0 +1,240 @@
+/*	module -- content-wrapper */
+
+.content-wrapper {
+    width: 100%;
+    overflow-y: auto;
+}
+
+/* high resolution */
+@media only screen and (min-width: 992px) {
+    
+    .content-wrapper {
+        width: 70%;
+        height: 100%;
+    }
+}
+
+/**************************************************************************/
+
+/*	module -- content */
+
+.main-content {
+    background: #F1F4F9;
+    padding: 1em;
+}
+
+/*	component -- experience__item */
+
+.experience__item {
+    display: flex;
+    flex-flow: row;
+
+    width: 100%;
+}
+
+    .company__logo {
+        width: 80px;
+        height: 80px;
+        margin-right: 0.5em;
+        background: #EEE;
+    }
+
+    .company__title {
+        font-weight: 200;
+        font-size: 1em;
+        margin: 0 0 .5em 0;
+    }
+
+    .company__role {
+        font-weight: 100;
+        font-size: .8em;
+        color: #777;
+        margin: 0;
+    }
+
+        .company__year {
+            color: #AAA;
+        }
+
+
+/*	component -- education__item */        
+
+.education__item {
+    display: flex;
+    flex-flow: column wrap;
+
+    width: 100%;
+}
+
+    .university__name {
+        font-weight: 200;
+        font-size: 1em;
+        color: #555;
+        margin: 0 0 .5em 0;
+    }
+
+    .university__title {
+        font-weight: 200;
+        font-size: .8em;
+        color: #777;
+        margin: 0;
+    }
+
+    .university__gpa {
+        color: #999;
+    }
+
+/*	component -- skills */
+
+.skill__item {
+    padding: 1em 0;
+}
+
+    .skill__header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 0.4em;
+        width: 100%;
+    }
+
+    .skill__title {
+        font-weight: 200;
+        font-size: 1em;
+        color: #555;
+        margin: 0;
+    }
+
+    .skill__level-label {
+        font-weight: 200;
+        font-size: .8em;
+        color: #777;
+        margin: 0;
+    }
+
+    .skill__level-bar {
+        height: 15px;
+        background: #EEE;
+    }
+
+    .skill__level-bar-inner {
+        height: 15px;
+        background: #66cb8c;
+    }
+
+
+/*	component -- project__item */        
+
+.project__item {
+    display: flex;
+    flex-flow: column wrap;
+
+    width: 100%;
+    padding: 1.5em 0;
+    border-bottom: 0.5px solid #CCC;
+}
+
+    .project__item:last-child {
+        border-bottom: none;
+    }
+
+    .project__cover-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 0.8em 0;
+        background: #444;
+    }
+
+    .project__cover-wrapper--web-app {
+        width: 100%;
+        height: 300px;
+        background: #DDD;
+    }
+ 
+        .project__cover--mobile-app {
+            max-width:300px;
+            max-height:530px;
+            width: auto;
+            height: auto;
+        }
+
+    .project__title {
+        font-weight: 200;
+        font-size: 1.2em;
+        color: #555;
+        margin: 0 0 .5em 0;
+    }
+
+    .project__description {
+        font-size: 1em;
+        line-height: 1.5em;
+        text-align: justify;
+        color: #777;
+        margin: 0;
+    }
+
+/* high resolution */
+@media only screen and (min-width: 992px) {
+
+    .project__item {
+        flex-flow: row wrap;
+    }
+    
+        .project__cover-wrapper {
+            width: auto;
+            height: 400px;
+        }
+
+        .project__cover-wrapper--web-app {
+            width: 100%;
+            height: 400px;
+            margin: 0 0 1.5em 0;
+        }
+
+        .project__cover-wrapper--mobile-app {
+            width: auto;
+            height: 100%;
+            margin: 0 1.5em 0 0;
+        }
+
+            .project__cover--web-app {
+                width: 100%;
+                height: 100%
+            }
+
+            .project__cover--mobile-app {
+                width: 100%;
+                height: 100%
+            }
+
+        .project__content-wrapper {
+            width: calc(100% - (300px + 1.5em));
+        }
+  
+}        
+
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+}
