@@ -1,0 +1,122 @@
+/*	module -- side-bar */
+
+.side-bar {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 2em;
+
+    background-color: #0099CC;
+    color: #FFF;
+}
+
+    .side-bar__profile-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1.5em;
+    }
+
+    .side-bar__profile-content {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .profile-content__name {
+            font-size: 2.2em;
+            color: #ffffff;
+            text-align: center;
+            margin: 0 0 0.2em 0;
+        }
+
+        .profile-content__desc {
+            font-size: 1.5em;
+            color: #eeeeee;
+            margin: 0 0 .4em 0;
+        }
+
+        .profile-content__social {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+            margin: 0 0 .8em 0;
+        }
+
+            .social__link {
+                font-size: 1.25em;
+                background: rgb(3, 137, 182);
+                width: 36px;
+                height: 36px;
+                display: inline-block;
+                border-radius: 50%;
+                color: #fff;
+                text-align: center;
+                margin-right: 0.5em;
+            }
+
+            .social__link:hover {
+                color: rgb(3, 137, 182);
+                background: #fff;
+            }
+
+                .social__link > .fa {
+                    padding-top: 0.4em;
+                }
+
+            .profile-content__contact-me:hover {
+                color: rgb(7, 110, 145);
+                background-color: #FFF;
+            }    
+
+/* mid resolution */        
+@media only screen and (min-width: 600px) {
+
+    .side-bar {
+        flex-flow: row;
+    }
+    
+        .side-bar__profile-image {
+            margin-bottom: 0;
+            margin-right: 1.5em;
+        }
+}
+
+/* high resolution */
+@media only screen and (min-width: 992px) {
+
+    .side-bar {
+        flex-flow: column;
+        width: 30%;
+        height: 100%;
+    }
+
+        .side-bar__profile-image {
+            margin-right: 0;
+            margin-bottom: 1.5em;
+        }
+        
+            .profile-content__name,
+            .profile-content__desc,
+            .profile-content__social {
+                margin-bottom: 0.3em;
+            }
+
+            .profile-content__desc {
+                margin-bottom: 1em;
+            }
+
+            .profile-content__social {
+                margin-bottom: 1em;
+            }
+}
+
+/* high resolution */
+@media only screen and (min-width: 1200px) {
+   
+}
