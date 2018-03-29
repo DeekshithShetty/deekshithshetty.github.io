@@ -30,6 +30,7 @@ body {
 p {
     color: #555;
     margin: .8em 0;
+    text-align: justify;
 }
 
 section {
@@ -37,7 +38,7 @@ section {
 }
 
 a {
-    color: #3aaa64;
+    color: #0099CC;
     touch-action: manipulation;
     cursor: pointer;
     text-decoration: none;
@@ -48,7 +49,7 @@ a {
 }
 
     a:hover {
-        color: #5f6b77;
+        color:  rgb(7, 110, 145);
     }
 
     a:focus {
@@ -62,7 +63,6 @@ a.btn {
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     padding: 8px 16px;
-    font-weight: bold;
 }
 
 .btn .fa,
@@ -86,7 +86,7 @@ a.btn:focus {
 
 .card {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-    padding: 1em 1.5em;
+    padding: 1em;
     background: #fff;
 }
 
@@ -94,7 +94,7 @@ a.btn:focus {
         font-weight: 200;
         font-size: 1.3em;
         margin-bottom: 1em;
-        color: #999;
+        color: #AAA;
     }
 
         /* TODO: Remove the below code once the site is done */
@@ -104,6 +104,14 @@ a.btn:focus {
         }
 
     .card__content {
-        font-size: 1.2em;
-        color: #555;
+        font-size: 1em;
+        color: #444;
     }
+
+/* high resolution */
+@media only screen and (min-width: 992px) {
+    
+    .card {
+        padding: 1em 1.5em;
+    }
+}    
