@@ -28,16 +28,16 @@
     }
 
         .profile-content__name {
-            font-size: 2.2em;
+            font-size: 2em;
             color: #ffffff;
             text-align: center;
             margin: 0 0 0.2em 0;
         }
 
         .profile-content__desc {
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: #eeeeee;
-            margin: 0 0 .4em 0;
+            margin: 0 0 1em 0;
         }
 
         .profile-content__social {
@@ -45,7 +45,7 @@
             flex-flow: row wrap;
             justify-content: space-around;
 
-            margin: 0 0 .8em 0;
+            margin: 0 0 .6em 0;
         }
 
             .social__link {
@@ -108,7 +108,7 @@
             }
 
             .profile-content__desc {
-                margin-bottom: 1em;
+                margin-bottom: 1.5em;
             }
 
             .profile-content__social {

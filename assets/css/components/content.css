@@ -20,7 +20,14 @@
 
 .main-content {
     background: #F1F4F9;
-    padding: 1em;
+    padding: 0.5em;
+}
+
+@media only screen and (min-width: 992px) {
+    
+    .main-content {
+        padding: 1em;
+    }
 }
 
 /*	component -- experience__item */
@@ -32,24 +39,28 @@
     width: 100%;
 }
 
-    .company__logo {
+    .company__logo-wrapper {
         width: 80px;
         height: 80px;
-        margin-right: 0.5em;
+        margin-right: 0.8em;
         background: #EEE;
     }
+        .company__logo {
+            width: 100%;
+            height: auto;
+            transform: translateY(50%);
+        }
 
     .company__title {
         font-weight: 200;
-        font-size: 1em;
-        margin: 0 0 .5em 0;
+        margin: .2em 0 .5em 0;
     }
 
     .company__role {
-        font-weight: 100;
-        font-size: .8em;
+        font-size: 1em;
         color: #777;
         margin: 0;
+        text-align: left;
     }
 
         .company__year {
@@ -68,16 +79,15 @@
 
     .university__name {
         font-weight: 200;
-        font-size: 1em;
         color: #555;
         margin: 0 0 .5em 0;
     }
 
     .university__title {
-        font-weight: 200;
-        font-size: .8em;
+        font-size: 1em;
         color: #777;
         margin: 0;
+        text-align: left;
     }
 
     .university__gpa {
@@ -87,7 +97,7 @@
 /*	component -- skills */
 
 .skill__item {
-    padding: 1em 0;
+    padding: 0 0 1.5em 0;
 }
 
     .skill__header {
@@ -102,14 +112,13 @@
 
     .skill__title {
         font-weight: 200;
-        font-size: 1em;
         color: #555;
         margin: 0;
     }
 
     .skill__level-label {
         font-weight: 200;
-        font-size: .8em;
+        font-size: 1em;
         color: #777;
         margin: 0;
     }
@@ -149,7 +158,7 @@
 
     .project__cover-wrapper--web-app {
         width: 100%;
-        height: 300px;
+        height: 100%;
         background: #DDD;
     }
  
@@ -162,8 +171,7 @@
 
     .project__title {
         font-weight: 200;
-        font-size: 1.2em;
-        color: #555;
+        color: #444;
         margin: 0 0 .5em 0;
     }
 
@@ -188,8 +196,8 @@
         }
 
         .project__cover-wrapper--web-app {
-            width: 100%;
-            height: 400px;
+            width: auto;
+            height: 100%;
             margin: 0 0 1.5em 0;
         }
 
@@ -212,6 +220,10 @@
         .project__content-wrapper {
             width: calc(100% - (300px + 1.5em));
         }
+
+            .project__content-wrapper--web-app {
+                width: 100%;
+            }
   
 }        
 

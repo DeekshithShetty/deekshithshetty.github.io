@@ -54,24 +54,15 @@
         <main class="main-content">
 
             <section class="card">
-                <h2 class="card__heading">Warning <i class="fa fa-exclamation-triangle"></i></h2>
-                <div class="card__content">
-                    <p>This site is still under progress. Proceed at your own risk! ... jk</p>    
-                </div>          
-            </section>
-
-            <section class="card">
                 <h2 class="card__heading">About Me</h2>
                 <div class="card__content">
                     <p>
                         A wannabe "one of the best web developer in the world". I am passionate about JavaScript, React and everything about web.
                         I like to combine the art of programming with the art of design to develop super awesome apps.
                     </p>
-                    <p>If I am not coding, I might be doing any one of the below - Gaming, listening to music, reading a novel?, watching wrestling or european football (Man Utd fan), 
+                    <p>If I am not coding, I might be doing any one of the below - gaming, listening to music, reading a novel?, watching wrestling or european football (Man Utd fan), 
                         bingewatching a tv-show or an anime. You can call these as my hobbies.
-                        Get a life dude... ryt? Yeah I know.
                     </p>
-                    <p>PS: I made this website.</p>
                 </div>          
             </section>
 
@@ -79,10 +70,14 @@
                 <h2 class="card__heading">Work Experience</h2>
                 <div class="card__content">
                     <div class="experience__item">
-                        <div class="company__logo"></div>
+                        <div class="company__logo-wrapper">
+                            <img class="company__logo"
+                                src="assets/images/company/allegion-logo.png" 
+                                alt="Allegion" />
+                        </div>
                         <div>
-                            <h3 class="company__title">Allegion</h3>
-                            <h4 class="company__role">Web Developer <span class="company__year">(2016 - Present)</span></h4>
+                            <h4 class="company__title">Allegion</h4>
+                            <p class="company__role">Web Developer <span class="company__year">(2016 - Present)</span></p>
                         </div>
                     </div>
                 </div>            
@@ -92,11 +87,11 @@
                 <h2 class="card__heading">Education</h2>
                 <div class="card__content">
                     <div class="education__item">
-                        <h3 class="university__name">NMAM Insitute Of Technology</h3>
-                        <h4 class="university__title">
+                        <h4 class="university__name">NMAM Insitute Of Technology</h4>
+                        <p class="university__title">
                             B.E Computer Science 
                             <span class="university__gpa">(Grade 9.35)</span>
-                        </h4>
+                        </p>
                     </div>
                 </div>            
             </section>
@@ -109,48 +104,20 @@
                     
                         <div class="skill__item">
                             <div class="skill__header">
-                                <h3 class="skill__title">JavaScript</h3>
-                                <h4 class="skill__level-label">
-                                    Expert
-                                </h4>
+                                <h4 class="skill__title">JavaScript</h4>
+                                <p class="skill__level-label">Expert</p>
                             </div>
 
                             </h3>
-                            <div class="skill__level-bar" title="91%">
-                                <div class="skill__level-bar-inner" data-level="91%"></div>                                      
+                            <div class="skill__level-bar" title="85%">
+                                <div class="skill__level-bar-inner" data-level="85%"></div>                                      
                             </div>                               
                         </div>
 
                         <div class="skill__item">
                             <div class="skill__header">
-                                <h3 class="skill__title">React.js</h3>
-                                <h4 class="skill__level-label">
-                                    Proficient
-                                </h4>
-                            </div>
-                            <div class="skill__level-bar" title="76%">
-                                <div class="skill__level-bar-inner" data-level="76%"></div>                                      
-                            </div>                               
-                        </div>
-                        
-                        <div class="skill__item">
-                            <div class="skill__header">
-                                <h3 class="skill__title">jQuery</h3>
-                                <h4 class="skill__level-label">
-                                    Proficient
-                                </h4>
-                            </div>
-                            <div class="skill__level-bar" title="70%">
-                                <div class="skill__level-bar-inner" data-level="70%"></div>                                      
-                            </div>                              
-                        </div>
-
-                        <div class="skill__item">
-                            <div class="skill__header">
-                                <h3 class="skill__title">CSS</h3>
-                                <h4 class="skill__level-label">
-                                    Proficient
-                                </h4>
+                                <h4 class="skill__title">CSS</h4>
+                                <p class="skill__level-label">Expert</p>
                             </div>
                             <div class="skill__level-bar" title="80%">
                                 <div class="skill__level-bar-inner" data-level="80%"></div>                                      
@@ -159,10 +126,28 @@
 
                         <div class="skill__item">
                             <div class="skill__header">
-                                <h3 class="skill__title">UI/UX</h3>
-                                <h4 class="skill__level-label">
-                                    Novice
-                                </h4>
+                                <h4 class="skill__title">React.js</h4>
+                                <p class="skill__level-label">Proficient</p>
+                            </div>
+                            <div class="skill__level-bar" title="70%">
+                                <div class="skill__level-bar-inner" data-level="70%"></div>                                      
+                            </div>                               
+                        </div>
+                        
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <h4 class="skill__title">jQuery</h4>
+                                <p class="skill__level-label">Proficient</p>
+                            </div>
+                            <div class="skill__level-bar" title="65%">
+                                <div class="skill__level-bar-inner" data-level="65%"></div>                                      
+                            </div>                              
+                        </div>
+
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <h4 class="skill__title">UX/UI</h4>
+                                <p class="skill__level-label">Novice</p>
                             </div>
                             <div class="skill__level-bar" title="50%">
                                 <div class="skill__level-bar-inner" data-level="50%"></div>                                      
@@ -171,28 +156,28 @@
 
                         <div class="skill__item">
                             <div class="skill__header">
-                                <h3 class="skill__title">C# Web API</h3>
-                                <h4 class="skill__level-label">
+                                <h4 class="skill__title">Android App Development</h4>
+                                <p class="skill__level-label">
                                     Novice
-                                </h4>
+                                </p>
                             </div>
-                            <div class="skill__level-bar" title="45%">
-                                <div class="skill__level-bar-inner" data-level="45%"></div>                                      
+                            <div class="skill__level-bar" title="50%">
+                                <div class="skill__level-bar-inner" data-level="50%"></div>                                      
                             </div>                              
                         </div>
 
                         <div class="skill__item">
                             <div class="skill__header">
-                                <h3 class="skill__title">Node.js</h3>
-                                <h4 class="skill__level-label">
+                                <h4 class="skill__title">C# Web API</h4>
+                                <p class="skill__level-label">
                                     Novice
-                                </h4>
+                                </p>
                             </div>
-                            <div class="skill__level-bar" title="30%">
-                                <div class="skill__level-bar-inner" data-level="30%"></div>                                      
+                            <div class="skill__level-bar" title="45%">
+                                <div class="skill__level-bar-inner" data-level="45%"></div>                                      
                             </div>                              
                         </div>
-                                        
+            
                     </div>
 
                 </div>             
@@ -206,8 +191,8 @@
                         <div class="project__cover-wrapper project__cover-wrapper--web-app">
                             <div class="project__cover--web"></div>
                         </div>
-                        <div class="project__content-wrapper">
-                            <h3 class="project__title">Hydra</h3>
+                        <div class="project__content-wrapper project__content-wrapper--web-app">
+                            <h3 class="project__title">Hydra - An inventory management app</h3>
                             <p class="project__description">
                                 TODO: write something cool about hydra.
                                 hail hydra!!!
@@ -219,11 +204,11 @@
                         <div class="project__cover-wrapper project__cover-wrapper--mobile-app">
                             <div id="slider" class="project__cover--mobile-app">
                                 <figure>
-                                    <img src="assets/images/game-rack/1.png" alt>
-                                    <img src="assets/images/game-rack/2.png" alt>
-                                    <img src="assets/images/game-rack/3.png" alt>
-                                    <img src="assets/images/game-rack/4.png" alt>
-                                    <img src="assets/images/game-rack/1.png" alt>
+                                    <img src="assets/images/projects/game-rack/1.png" alt>
+                                    <img src="assets/images/projects/game-rack/2.png" alt>
+                                    <img src="assets/images/projects/game-rack/3.png" alt>
+                                    <img src="assets/images/projects/game-rack/4.png" alt>
+                                    <img src="assets/images/projects/game-rack/1.png" alt>
                                 </figure>
                             </div>
                         </div>
@@ -240,6 +225,9 @@
                                 Supports a catalog of +74,874 games and 
                                 backup/restore option for your library anytime.
                             </p>
+                            <p>
+                                <a href="https://play.google.com/store/apps/details?id=com.saiyanstudio.gamerack" target="_blank">Play Store Link</a>
+                            </p>
                         </div>
                     </div>
 
@@ -247,7 +235,7 @@
                         <div class="project__cover-wrapper project__cover-wrapper--web-app">
                             <div class="project__cover--web"></div>
                         </div>
-                        <div class="project__content-wrapper">
+                        <div class="project__content-wrapper project__content-wrapper--web-app">
                             <h3 class="project__title">Code Like Ninja - Blog</h3>
                             <p class="project__description">
                                 TODO: write something cool about CLN.
@@ -256,29 +244,74 @@
                     </div>
 
                     <div class="project__item">
+
                         <div class="project__cover-wrapper project__cover-wrapper--mobile-app">
-                            <div class="project__cover--mobile-app">
+                            <div id="slider" class="project__cover--mobile-app">
+                                <figure>
+                                    <img src="assets/images/projects/grocery-assistant/1.png" alt>
+                                    <img src="assets/images/projects/grocery-assistant/2.png" alt>
+                                    <img src="assets/images/projects/grocery-assistant/3.png" alt>
+                                    <img src="assets/images/projects/grocery-assistant/4.png" alt>
+                                    <img src="assets/images/projects/grocery-assistant/1.png" alt>
+                                </figure>
                             </div>
                         </div>
+
                         <div class="project__content-wrapper">
                             <h3 class="project__title">Grocery Shopping Assistant</h3>
+
                             <p class="project__description">
-                                TODO: write something cool about GSA.
+                                An integrated solution for users in keeping track of grocery items 
+                                and food products bought and their associated nutritional and calorie 
+                                values using the concepts of image processing, which was done as a part 
+                                of my final year engineering major project. 
+                                The information is shown in terms of graphs and charts which will be 
+                                helpful for a novice user or a dietitian to understand.
+                            </p>
+                            <br />
+
+                            <p class="project__description">
+                                Concepts: Image processing, Machine Learning
+                            </p>
+                            <p class="project__description">
+                                Technologies: OpenCV C++, Machine Java, XML, Node.js, Express
+                            </p>
+                            <br />
+
+                            <p class="project__description">
+                                Paper published in International Journal of Research and Engineering (IJRE).
+                            </p>
+                            <p>
+                                <a href="http://digital.ijre.org/index.php/int_j_res_eng/article/view/261" target="_blank">Link to paper</a>
                             </p>
                         </div>
                     </div>
 
                     <div class="project__item">
-                            <div class="project__cover-wrapper project__cover-wrapper--web-app">
-                                <div class="project__cover--web"></div>
-                            </div>
-                            <div class="project__content-wrapper">
-                                <h3 class="project__title">Marvel Superheroes</h3>
-                                <p class="project__description">
-                                    TODO: write something cool about Marvel Superheroes.
-                                </p>
+
+                        <div class="project__cover-wrapper project__cover-wrapper--web-app">
+                            <div id="slider" class="project__cover--web-app">
+                                <figure>
+                                    <img src="assets/images/projects/marvel-superheroes/1.png" alt>
+                                    <img src="assets/images/projects/marvel-superheroes/2.png" alt>
+                                    <img src="assets/images/projects/marvel-superheroes/3.png" alt>
+                                    <img src="assets/images/projects/marvel-superheroes/4.png" alt>
+                                    <img src="assets/images/projects/marvel-superheroes/1.png" alt>
+                                </figure>
                             </div>
                         </div>
+
+                        <div class="project__content-wrapper project__content-wrapper--web-app">
+                            <h3 class="project__title">Marvel Superheroes</h3>
+                            <p class="project__description">
+                                A Node Webkit desktop application designed using JavaScript, HTML, CSS in the front end 
+                                and Node.JS in the back end along with the marvel-api. 
+                                It allows the user to browse through various characters of 
+                                Marvel Universe displaying their bio and the list of comics they appear in. 
+                                The user can then purchase the comics based on their interest.
+                            </p>
+                        </div>
+                    </div>
 
                     <div class="project__item">
                         <div class="project__cover-wrapper project__cover-wrapper--mobile-app">
@@ -288,7 +321,18 @@
                         <div class="project__content-wrapper">
                             <h3 class="project__title">Weather God</h3>
                             <p class="project__description">
-                                TODO: write something cool about Weather God.
+                                A minimalistic weather app  
+                                that provides the appropriate weather details without bloating the screen. 
+                                Can automatically detect users location through GPS. 
+                                It allows the users to modify the theme and the accent color according to the mood.
+                                Inspired from Vieather, a Windows Phone weather app. 
+                                Features include - minimal design with dark and light theme,
+                                auto refresh feature, 7 day forecast, 
+                                temperature graphs for hourly and weekly forecasts and 
+                                supports multiple locations weather.
+                            </p>
+                            <p>
+                                <a href="https://play.google.com/store/apps/details?id=com.saiyanstudio.weathergod" target="_blank">Play Store Link</a>
                             </p>
                         </div>
                     </div>
