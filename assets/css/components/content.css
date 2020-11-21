@@ -30,6 +30,49 @@
     }
 }
 
+/*	component -- education__item */        
+
+.education__item {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 0.8em;
+    width: 100%;
+}
+
+    .university__logo-wrapper {
+        width: 80px;
+        height: 80px;
+        margin-right: 0.8em;
+        background: #EEE;
+    }
+        .university__logo {
+            width: 100%;
+            height: auto;
+        }
+
+    .university__name {
+        font-weight: 200;
+        margin: .2em 0 0 0;
+    }
+
+    .university__role {
+        font-size: 1em;
+        color: #777;
+        margin: 0;
+        text-align: left;
+    }
+
+    .university__grade {
+        font-size: 0.9em;
+        color: #777;
+        margin: 0;
+        text-align: left;
+    }
+
+    .university__gpa {
+        color: #999;
+    }
+
 /*	component -- experience__item */
 
 .experience__item {
@@ -48,10 +91,9 @@
         .company__logo {
             width: 100%;
             height: auto;
-            transform: translateY(50%);
         }
 
-    .company__title {
+    .company__name {
         font-weight: 200;
         margin: .2em 0 .5em 0;
     }
@@ -67,32 +109,6 @@
             color: #AAA;
         }
 
-
-/*	component -- education__item */        
-
-.education__item {
-    display: flex;
-    flex-flow: column wrap;
-
-    width: 100%;
-}
-
-    .university__name {
-        font-weight: 200;
-        color: #555;
-        margin: 0 0 .5em 0;
-    }
-
-    .university__title {
-        font-size: 1em;
-        color: #777;
-        margin: 0;
-        text-align: left;
-    }
-
-    .university__gpa {
-        color: #999;
-    }
 
 /*	component -- skills */
 
